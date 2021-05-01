@@ -1,44 +1,39 @@
 <html>
 <head><title></title></head>
 <style>
-@keyframes spin 
+* 
 {
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100% 
-    {
-        transform: rotate(360deg);
-    }
+    margin: 0px;
+    padding: 0px;
 }
-
-.b
+body
 {
-    height: 300px;
-    width: 300px;
-    background-color: blue;
-    border: 5px solid black;
-    animation: spin 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.b:nth-child(2)
-{
-    transform-origin: left top;
+.hand {
+    width: 640px;
+    height: 320px;
+    position: relative;
 }
-.b:nth-child(3)
+.hand::before
 {
-    transform-origin: right top;
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 560px;
+    background-color: black;
+    border-radius: 160px 40px;
+    filter: blur(20px) opacity(0.3);
+    top: 160px;
 }
 </style>
 <body>
 
-<div class="b">
-</div>
-<div class="b">
-</div>
-<div class="b">
-</div>
+    <div class="hand">
+
+    </div>
 
 </body>
 </html>
