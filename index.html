@@ -51,14 +51,41 @@ body
     transform-origin: calc(100% - 80px) 80px;
     transform: rotate(-20deg);
 }
+.thumb::before
+{
+    content: "";
+    position: absolute;
+    height: 76px;
+    width: 76px;
+    background-color: white;
+    bottom: 0px;
+    left: 20px;
+    border-radius: 60% 10% 10% 30%;
+    border-radius: 4px solid rba(0, 0, 0, 0.1);
+}
+.finger
+{
+    background-color: #ffcd94;
+    position: absolute;
+    height: 140px;
+    width: 256px;
+    right: 210px;
+    bottom: 90px;
+}
 </style>
 <body>
-
     <div class="hand">
         <span class="palm">
-            <span class="thumb">
-                
+            <span class="thumb">              
             </span>
+            <span class="finger">
+            </span>
+            <span class="finger">
+            </span>
+            <span class="finger">
+            </span>
+            <span class="finger">
+            </span>  
         </span>
     </div>
 
