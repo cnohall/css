@@ -1,4 +1,4 @@
-# css projects
+# CSS Projects
 The different projects are organized as branches and are as follows:
 
 1. Tapping hand
