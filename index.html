@@ -71,6 +71,10 @@ body
     width: 256px;
     right: 210px;
     bottom: 170px;
+    transform: rotate(10deg) scale(var(--scale));
+    transform-origin: 100%  80px;
+    --scale: calc(1 - (5 - var(--n)) * 0.2);
+    filter: brightness(calc(100% - ( 5 - var(--n)) * 10%));
 }
 .finger::before
 {
@@ -85,11 +89,29 @@ body
     transform: rotate(-60deg);
     transform-origin: calc(100% - 40px) 40px;
 }
+.finger:nth-of-type(1)
+{
+    --n:1
+}
+.finger:nth-of-type(2)
+{
+    --n:2
+}
+.finger:nth-of-type(3)
+{
+    --n:3
+}
+.finger:nth-of-type(4)
+{
+    --n:4
+}
+.finger:nth-of-type(5)
+{
+    --n:5
+}
 </style>
 <body>
     <div class="hand">
-        <span class="palm">
-        </span>
         <span class="thumb">              
         </span>
         <span class="finger">
@@ -99,6 +121,8 @@ body
         <span class="finger">
         </span>
         <span class="finger">
+        </span>
+        <span class="palm">
         </span>  
     </div>
 
